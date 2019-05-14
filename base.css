@@ -14,6 +14,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
+  
 }
 html,
 body {
@@ -24,6 +25,7 @@ body {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    
 }
 h1,
 h2,
@@ -253,8 +255,8 @@ article {
 .page {
   position: relative;
   padding: 3em;
-  background: white;
-  box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.1);
+  background:white;
+  box-shadow: 0 20px 150px 0 rgba(37, 39, 41, 0.1);
   transition: box-shadow 0.2s linear;
 }
 .page[style^="border-color"] {
@@ -379,6 +381,7 @@ article {
 .grid > [class*="three wide"].column,
 .column.grid > [class*="three wide"].column {
   width: 18.75% !important;
+  
 }
 .grid > .row > [class*="four wide"].column,
 .grid > .column.row > [class*="four wide"].column,
@@ -500,17 +503,27 @@ article {
 
 /* Avatar */
 .avatar-wrapper {
+  
   padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  
+  
+
 }
 .avatar {
+
   position: relative;
   max-width: 15rem;
   display: block;
   flex: 1 0 auto;
+  width: 100%;
+ 
 }
+
+
 @media only screen and (max-width: 1199px) {
   .avatar-wrapper {
     padding: 0;
@@ -523,7 +536,7 @@ article {
 }
 .divider.fat {
   border-top: 0.3571428571428571em solid rgba(10, 10, 10, 1);
-  width: 33%;
+  width: 100%;
 }
 
 /* Language */
@@ -587,24 +600,23 @@ article {
 .contacts li a.facebook:hover {
   color: #3b5998;
 }
-.contacts li a.github:hover {
-  color: dimgrey;
-}
+
 .contacts li a.mail:hover {
   color: dimgrey;
 }
-.contacts li a.skype:hover {
-  color: #00aff0;
+
+.contacts li a.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:#e6683c;
+  
 }
-.contacts li a.telegram:hover {
-  color: #0088cc;
+.contacts li a.twitter:hover {
+  color: rgb(104, 225, 255);
+  
 }
-.contacts li a.phone:hover {
-  color: dimgrey;
-}
-.contacts li a.website {
-  display: none;
-}
+
 .contacts li a .icon {
   fill: currentColor;
   height: 1.1428rem;
@@ -691,6 +703,84 @@ details > div:after {
 }
 
 /* Details as a list item */
+details {
+  
+  color:black;
+}
+.punchline p
+{
+  margin:0;
+}
+.punchline li
+{
+  margin-bottom: 1em;
+}
+summary {
+
+  cursor: pointer;
+  outline: none;
+  margin-bottom:1rem;
+
+}
+
+details[open] summary {
+  opacity: 0.5;
+	animation-name: fadeOut;
+  animation-duration: 150ms;
+}
+
+details span {
+  display: block;
+  background-color: rgb(235, 232, 232);
+  border-radius: 0.3rem;
+  padding-left:0.3rem;
+  color:rgb(48, 47, 47);
+}
+
+@keyframes tinyGrow {
+	0% {
+    font-size: 0;
+    opacity: 0;
+  }
+  50%
+  {
+    font-size:0.5em;
+    opacity:0;
+  }
+	100% {
+    font-size: 1em;
+    opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity:0.5;
+  }
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+	100% {
+		opacity: 0.5;
+	}
+}
+
+details span {
+	animation-name: tinyGrow, fadeIn;
+  animation-duration: 350ms, 200ms;
+  animation-delay: 0ms, 200ms;
+}
+
 li.details {
   list-style-type: none;
 }

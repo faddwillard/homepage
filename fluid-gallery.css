@@ -5,14 +5,26 @@ body {
     font: normal 16px sans-serif;
     padding: 40px 0;
 }
-
+a{
+	color:black;
+	
+	text-decoration:none;
+	transition-duration: 1s;
+}
+a:hover
+{
+	text-decoration:none;
+	 
+	color:#999;;
+}
 .container.gallery-container {
     background-color: #fff;
     color: #35373a;
     min-height: 100vh;
     padding: 30px 50px;
 	box-shadow: 0 20px 150px 0 rgba(37, 39, 41, 0.1);
-	 transition: box-shadow 0.2s linear;
+	 transition: box-shadow 0.5s linear;
+	 border-radius:30px;
 	
 }
 .container.gallery-container:hover{

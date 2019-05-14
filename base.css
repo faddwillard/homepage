@@ -143,13 +143,15 @@ ol.inverted > li:before {
   margin-top: calc(0.4285rem / 2);
 }
 a {
-  color: blue;
+  color: rgb(65, 0, 187);
   background-color: transparent;
   text-decoration: none;
+  
 }
 a[rel="external"]:not(.label):hover,
 a.language:hover span {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 /* Prevent `sub` and `sup` elements from affecting the line height in all browsers */
@@ -604,6 +606,12 @@ article {
 .contacts li a.mail:hover {
   color: dimgrey;
 }
+.contacts li a.gallery:hover{
+  background: linear-gradient(45deg, #18a323 0%,#b629aa 25%,#dc2743 50%,#8ba013 75%,#18bc4f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:#772bb4;
+}
 
 .contacts li a.instagram:hover {
   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
@@ -747,6 +755,15 @@ details span {
     font-size:0.5em;
     opacity:0;
   }
+  70%
+  {
+    font-size: 0.7em;
+    opacity: 0;
+  }
+  85%{
+    font-size: 0.85em;
+    opacity:0;
+  }
 	100% {
     font-size: 1em;
     opacity: 0;
@@ -760,6 +777,14 @@ details span {
   50%
   {
     opacity:0.5;
+  }
+  70%
+  {
+    opacity: 0.7;
+  }
+  85%
+  {
+    opacity: 0.85;
   }
 	100% {
 		opacity: 1;
